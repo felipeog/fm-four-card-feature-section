@@ -1,5 +1,10 @@
-const SHADOW_CONFIG = { mode: "open" };
+const ELEMENT_NAME = "feature-card";
+const ELEMENT_ATTRIBUTES = {
+  accentColor: "accentColor",
+  iconHref: "iconHref",
+};
 const TEMPLATE_ID = "feature-card-template";
+const SHADOW_CONFIG = { mode: "open" };
 
 class FeatureCard extends HTMLElement {
   constructor() {
@@ -12,14 +17,14 @@ class FeatureCard extends HTMLElement {
 
     const article = shadow.querySelector("article");
 
-    if (this.hasAttribute("accentColor")) {
-      const accentColor = this.getAttribute("accentColor");
+    if (this.hasAttribute(ELEMENT_ATTRIBUTES.accentColor)) {
+      const accentColor = this.getAttribute(ELEMENT_ATTRIBUTES.accentColor);
 
       article.style.borderTopColor = accentColor;
     }
 
-    if (this.hasAttribute("iconHref")) {
-      const iconHref = this.getAttribute("iconHref");
+    if (this.hasAttribute(ELEMENT_ATTRIBUTES.iconHref)) {
+      const iconHref = this.getAttribute(ELEMENT_ATTRIBUTES.iconHref);
       const icon = new Image();
 
       icon.src = iconHref;
@@ -28,4 +33,4 @@ class FeatureCard extends HTMLElement {
   }
 }
 
-customElements.define("feature-card", FeatureCard);
+customElements.define(ELEMENT_NAME, FeatureCard);
