@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32.png"
+      type="image/png"
+    />
+
     <title>Four card feature section</title>
   </head>
 
@@ -19,20 +25,56 @@
       </article>
     </template>
 
-    <feature-card>
-      <span slot="title">My title 1</span>
-      <span slot="text">My text 1</span>
-    </feature-card>
+    <main>
+      <h1>Reliable, efficient delivery</h1>
+      <h2>Powered by Technology</h2>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
 
-    <feature-card></feature-card>
+      <section>
+        <feature-card
+          accentColor="hsl(180, 62%, 55%)"
+          iconHref="assets/icon-supervisor.svg"
+        >
+          <span slot="title">Supervisor</span>
+          <span slot="text">
+            Monitors activity to identify project roadblocks
+          </span>
+        </feature-card>
 
-    <feature-card>
-      <span slot="title">My title 2</span>
-      <span slot="text">My text 2</span>
-    </feature-card>
+        <feature-card
+          accentColor="hsl(0, 78%, 62%)"
+          iconHref="assets/icon-team-builder.svg"
+        >
+          <span slot="title">Team Builder</span>
+          <span slot="text">
+            Scans our talent network to create the optimal team for your project
+          </span>
+        </feature-card>
 
-    <h1>CSS scope test</h1>
-    <p>CSS scope test</p>
+        <feature-card
+          accentColor="hsl(34, 97%, 64%)"
+          iconHref="assets/icon-karma.svg"
+        >
+          <span slot="title">Karma</span>
+          <span slot="text">
+            Regularly evaluates our talent to ensure quality
+          </span>
+        </feature-card>
+
+        <feature-card
+          accentColor="hsl(212, 86%, 64%)"
+          iconHref="assets/icon-calculator.svg"
+        >
+          <span slot="title">Calculator</span>
+          <span slot="text">
+            Uses data from past projects to provide better delivery estimates
+          </span>
+        </feature-card>
+      </section>
+    </main>
 
     <script src="js/index.js"></script>
   </body>

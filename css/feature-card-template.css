@@ -1,7 +1,12 @@
-h1 {
+article {
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+
+/* h1 {
   color: red;
 }
 
 p {
   color: blue;
-}
+} */
