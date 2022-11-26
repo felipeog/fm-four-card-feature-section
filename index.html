@@ -17,15 +17,6 @@
   </head>
 
   <body>
-    <template id="feature-card-template">
-      <link href="css/feature-card-template.css" rel="stylesheet" />
-
-      <article>
-        <h1><slot name="title">NEED TITLE</slot></h1>
-        <p><slot name="text">NEED TEXT</slot></p>
-      </article>
-    </template>
-
     <main>
       <h1>Reliable, efficient delivery</h1>
       <h2>Powered by Technology</h2>
@@ -36,47 +27,39 @@
 
       <section>
         <feature-card
+          title="Supervisor"
+          text="Monitors activity to identify project roadblocks"
           accentColor="hsl(180, 62%, 55%)"
           iconHref="assets/icon-supervisor.svg"
         >
-          <span slot="title">Supervisor</span>
-          <span slot="text">
-            Monitors activity to identify project roadblocks
-          </span>
         </feature-card>
 
         <feature-card
+          title="Team Builder"
+          text="Scans our talent network to create the optimal team for your project"
           accentColor="hsl(0, 78%, 62%)"
           iconHref="assets/icon-team-builder.svg"
         >
-          <span slot="title">Team Builder</span>
-          <span slot="text">
-            Scans our talent network to create the optimal team for your project
-          </span>
         </feature-card>
 
         <feature-card
+          title="Karma"
+          text="Regularly evaluates our talent to ensure quality"
           accentColor="hsl(34, 97%, 64%)"
           iconHref="assets/icon-karma.svg"
         >
-          <span slot="title">Karma</span>
-          <span slot="text">
-            Regularly evaluates our talent to ensure quality
-          </span>
         </feature-card>
 
         <feature-card
+          title="Calculator"
+          text="Uses data from past projects to provide better delivery estimates"
           accentColor="hsl(212, 86%, 64%)"
           iconHref="assets/icon-calculator.svg"
         >
-          <span slot="title">Calculator</span>
-          <span slot="text">
-            Uses data from past projects to provide better delivery estimates
-          </span>
         </feature-card>
       </section>
     </main>
 
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
