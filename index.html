@@ -8,7 +8,32 @@
 
     <title>Four card feature section</title>
   </head>
+
   <body>
-    <h1>hello world</h1>
+    <template id="feature-card-template">
+      <link href="css/feature-card-template.css" rel="stylesheet" />
+
+      <article>
+        <h1><slot name="title">NEED TITLE</slot></h1>
+        <p><slot name="text">NEED TEXT</slot></p>
+      </article>
+    </template>
+
+    <feature-card>
+      <span slot="title">My title 1</span>
+      <span slot="text">My text 1</span>
+    </feature-card>
+
+    <feature-card></feature-card>
+
+    <feature-card>
+      <span slot="title">My title 2</span>
+      <span slot="text">My text 2</span>
+    </feature-card>
+
+    <h1>CSS scope test</h1>
+    <p>CSS scope test</p>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
