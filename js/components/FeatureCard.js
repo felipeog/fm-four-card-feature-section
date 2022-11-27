@@ -1,5 +1,6 @@
-import { Icon } from "./Icon.js";
 import { Heading } from "./Heading.js";
+import { Icon } from "./Icon.js";
+import { Text } from "./Text.js";
 
 class FeatureCard extends HTMLElement {
   static elementName = "feature-card";
@@ -46,11 +47,11 @@ class FeatureCard extends HTMLElement {
 
     if (this.hasAttribute(FeatureCard.elementAttributes.text)) {
       const text = this.getAttribute(FeatureCard.elementAttributes.text);
-      const textTextNode = document.createTextNode(text);
-      const p = document.createElement("p");
+      const textElement = document.createElement(Text.elementName);
 
-      p.appendChild(textTextNode);
-      article.appendChild(p);
+      textElement.setAttribute(Text.elementAttributes.text, text);
+      textElement.setAttribute(Text.elementAttributes.size, "sm");
+      article.appendChild(textElement);
     }
 
     if (this.hasAttribute(FeatureCard.elementAttributes.accentColor)) {
