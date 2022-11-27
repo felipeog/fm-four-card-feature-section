@@ -24,8 +24,20 @@ class FeatureCard extends HTMLElement {
 
     style.textContent = `
       article {
-        border-top-style: solid;
-        border-top-width: 4px;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      article div {
+        position: absolute;
+        height: 4px;
+        top: 0;
+        right: 0;
+        left: 0;
       }
     `;
     this.shadow.appendChild(style);
@@ -54,14 +66,6 @@ class FeatureCard extends HTMLElement {
       article.appendChild(textElement);
     }
 
-    if (this.hasAttribute(FeatureCard.elementAttributes.accentColor)) {
-      const accentColor = this.getAttribute(
-        FeatureCard.elementAttributes.accentColor
-      );
-
-      article.style.borderTopColor = accentColor;
-    }
-
     if (this.hasAttribute(FeatureCard.elementAttributes.iconName)) {
       const iconName = this.getAttribute(
         FeatureCard.elementAttributes.iconName
@@ -70,6 +74,16 @@ class FeatureCard extends HTMLElement {
 
       icon.setAttribute(Icon.elementAttributes.name, iconName);
       article.appendChild(icon);
+    }
+
+    if (this.hasAttribute(FeatureCard.elementAttributes.accentColor)) {
+      const accentColor = this.getAttribute(
+        FeatureCard.elementAttributes.accentColor
+      );
+      const topBorder = document.createElement("div");
+
+      topBorder.style.backgroundColor = accentColor;
+      article.appendChild(topBorder);
     }
 
     this.shadow.appendChild(article);
