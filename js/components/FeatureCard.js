@@ -1,4 +1,5 @@
 import { Icon } from "./Icon.js";
+import { Heading } from "./Heading.js";
 
 class FeatureCard extends HTMLElement {
   static elementName = "feature-card";
@@ -34,11 +35,13 @@ class FeatureCard extends HTMLElement {
 
     if (this.hasAttribute(FeatureCard.elementAttributes.title)) {
       const title = this.getAttribute(FeatureCard.elementAttributes.title);
-      const titleTextNode = document.createTextNode(title);
-      const h1 = document.createElement("h1");
+      const heading = document.createElement(Heading.elementName);
 
-      h1.appendChild(titleTextNode);
-      article.appendChild(h1);
+      heading.setAttribute(Heading.elementAttributes.text, title);
+      heading.setAttribute(Heading.elementAttributes.tag, "h1");
+      heading.setAttribute(Heading.elementAttributes.size, "md");
+      heading.setAttribute(Heading.elementAttributes.weight, "600");
+      article.appendChild(heading);
     }
 
     if (this.hasAttribute(FeatureCard.elementAttributes.text)) {
