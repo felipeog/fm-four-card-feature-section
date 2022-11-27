@@ -73,6 +73,13 @@ class FeatureCard extends HTMLElement {
       const icon = document.createElement(Icon.elementName);
 
       icon.setAttribute(Icon.elementAttributes.name, iconName);
+      icon.setAttribute(
+        Icon.elementAttributes.elementStyle,
+        `
+          margin-top: 2.4rem;
+          float: right;
+        `
+      );
       article.appendChild(icon);
     }
 

@@ -22,9 +22,10 @@ class Text extends HTMLElement {
         padding: 0;
         margin: 0;
       }
-
+      
       .sm {
         font-size: 0.8rem;
+        letter-spacing: 0.02rem;
       }
 
       .md {

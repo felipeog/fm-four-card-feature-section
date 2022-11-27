@@ -2,6 +2,7 @@ class Icon extends HTMLElement {
   static elementName = "custom-icon";
   static elementAttributes = {
     name: "name",
+    elementStyle: "elementStyle",
   };
   static icons = {
     calculator: "assets/icons/icon-calculator.svg",
@@ -19,12 +20,15 @@ class Icon extends HTMLElement {
 
   render() {
     if (this.hasAttribute(Icon.elementAttributes.name)) {
+      const elementStyle =
+        this.getAttribute(Icon.elementAttributes.elementStyle) ?? "";
       const name = this.getAttribute(Icon.elementAttributes.name);
       const iconHref = Icon.icons[name] ?? "";
       const icon = new Image();
 
-      icon.src = iconHref;
-      icon.alt = "";
+      icon.setAttribute("src", iconHref);
+      icon.setAttribute("alt", "");
+      icon.setAttribute("style", elementStyle);
       this.shadow.appendChild(icon);
     }
   }

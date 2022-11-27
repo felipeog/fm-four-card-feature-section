@@ -39,7 +39,7 @@ class Heading extends HTMLElement {
       }
 
       .lg {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
     `;
     this.shadow.appendChild(style);
