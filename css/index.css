@@ -3,3 +3,45 @@ html {
   font-size: 16px;
   background-color: hsl(0, 0%, 98%);
 }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.header {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header__text {
+  margin-top: 1.4rem;
+}
+
+.features {
+  display: grid;
+  grid-template-areas:
+    "one two   four"
+    "one three four";
+  gap: 2rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.features :nth-child(1) {
+  grid-area: one;
+}
+
+.features :nth-child(2) {
+  grid-area: two;
+}
+
+.features :nth-child(3) {
+  grid-area: three;
+}
+
+.features :nth-child(4) {
+  grid-area: four;
+}
