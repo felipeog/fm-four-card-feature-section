@@ -1,4 +1,5 @@
-import { FeatureCard } from "./FeatureCard/index.js";
-import { Heading } from "./Heading/index.js";
+import { FeatureCard } from "./FeatureCard.js";
+import { Heading } from "./Heading.js";
+import { Icon } from "./Icon.js";
 
-export const components = [FeatureCard, Heading];
+export const components = [FeatureCard, Heading, Icon];
