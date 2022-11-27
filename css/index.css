@@ -21,27 +21,39 @@ main {
 }
 
 .features {
-  display: grid;
-  grid-template-areas:
-    "one two   four"
-    "one three four";
-  gap: 2rem;
-  align-items: center;
   margin-top: 4rem;
 }
 
-.features :nth-child(1) {
-  grid-area: one;
+@media screen and (min-width: 960px) {
+  .features {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+      "one two   four"
+      "one three four";
+    align-items: center;
+  }
+
+  .features :nth-child(1) {
+    grid-area: one;
+  }
+
+  .features :nth-child(2) {
+    grid-area: two;
+  }
+
+  .features :nth-child(3) {
+    grid-area: three;
+  }
+
+  .features :nth-child(4) {
+    grid-area: four;
+  }
 }
 
-.features :nth-child(2) {
-  grid-area: two;
-}
-
-.features :nth-child(3) {
-  grid-area: three;
-}
-
-.features :nth-child(4) {
-  grid-area: four;
+@media screen and (max-width: 959px) {
+  .features {
+    display: grid;
+    gap: 2rem;
+  }
 }
