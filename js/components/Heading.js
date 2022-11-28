@@ -25,7 +25,7 @@ class Heading extends HTMLElement {
       h4,
       h5,
       h6 {
-        color: hsl(234, 12%, 34%);
+        color: var(--gray_1);
         padding: 0;
         margin: 0;
       }

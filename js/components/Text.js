@@ -18,7 +18,7 @@ class Text extends HTMLElement {
 
     style.textContent = `
       p {
-        color: hsl(229, 6%, 66%);
+        color: var(--gray_2);
         padding: 0;
         margin: 0;
       }

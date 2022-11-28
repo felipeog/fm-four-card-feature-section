@@ -3,4 +3,3 @@
 ## TODO
 
 - [ ] Components should receive `elementClass` and `elementStyle` attributes
-- [ ] Add CSS variables theme

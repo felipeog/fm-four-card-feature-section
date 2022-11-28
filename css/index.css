@@ -1,7 +1,17 @@
+:root {
+  --accent_1: hsl(180, 62%, 55%);
+  --accent_2: hsl(0, 78%, 62%);
+  --accent_3: hsl(34, 97%, 64%);
+  --accent_4: hsl(212, 86%, 64%);
+  --gray_1: hsl(234, 12%, 34%);
+  --gray_2: hsl(229, 6%, 66%);
+  --gray_3: hsl(0, 0%, 98%);
+}
+
 html {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--gray_3);
 }
 
 main {
@@ -20,10 +30,7 @@ main {
   margin-top: 1.2rem;
 }
 
-.features {
-  margin-top: 4rem;
-}
-
+/* desktop */
 @media screen and (min-width: 960px) {
   .features {
     display: grid;
@@ -32,6 +39,7 @@ main {
       "one two   four"
       "one three four";
     align-items: center;
+    margin-top: 4rem;
   }
 
   .features :nth-child(1) {
@@ -51,9 +59,11 @@ main {
   }
 }
 
+/* mobile */
 @media screen and (max-width: 959px) {
   .features {
     display: grid;
     gap: 2rem;
+    margin-top: 4rem;
   }
 }
